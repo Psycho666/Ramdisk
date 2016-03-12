@@ -16,15 +16,8 @@ cat << CTAG
 		default:Stock,
 		description: "MSM Hotplug is hotplug driver that hotplug cores based on system load. Intelli Hotplug is interlligient which hooks in task scheduler and hotplug cores accordingly. Bricked hotplug is conservative hotplug driver. Stock will let system ROM to decide hotplug mechanism; it is dependent of mpdecision present within ROM. Zen Decision, this adds a simple driver intended to allow the MPDecision service to be disabled.",
 		action:"hotplug_select /data/.emotionkernel/hotplug_prof",
-		values:[ Stock, MSM_Hotplug, Intelli_Hotplug, Bricked_Hotplug, Zen_Decision
+		values:[ Stock, MSM_Hotplug, Intelli_Hotplug
 		],
-	}},
-	{ SSeekBar:{
-		title:"Touch Boosted CPUs",
-		description:"This will decided no. of cores to be boosted when screen is touched. Higher the number of cores, higher the performance. This must be lesser than or equal to no. of Max CPUs online. When is is set to lesser or equal value of Min CPUs online, it is as good as disabled. This tunable works only for MSM Hotplug and Intelli Hotplug.",
-		min:1, max:4, unit:" cores", step:1,
-		default:2,
-                action:"hotplug_action cpus_boosted"
 	}},
 	{ SSeekBar:{
 		title:"Min CPUs Online",
