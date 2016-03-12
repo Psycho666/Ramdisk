@@ -10,7 +10,7 @@ import /init.${ro.hardware}.rc
 import /init.${ro.zygote}.rc
 import /init.trace.rc
 import /init.carrier.rc
-import /init.container.rc
+#import /init.container.rc
 import /init.rilcommon.rc
 
 on early-init
@@ -1758,3 +1758,9 @@ on property:service.vpnclientd.enable=1
 on property:service.vpnclientd.enable=0
     stop vpnclientd
 
+# init Simplicity Kernel
+service emotioninit /sbin/simpl.sh
+    class main
+    user root
+    oneshot
+    
