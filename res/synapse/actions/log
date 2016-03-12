@@ -1,5 +1,5 @@
 TIMESTAMP=`date +%Y-%m-%d.%H.%M.%S`;
-LOGS=/sdcard/Emotion/Logs;
+LOGS=/sdcard/Simplicity/Logs;
 
 [ ! -d "$LOGS" ] && mkdir -p "$LOGS";
 chmod 755 $LOGS
