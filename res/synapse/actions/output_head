@@ -2,10 +2,10 @@ if [ -f $1 ]
 then
   L=/sys/kernel/sound_control_3/gpl_sound_control_locked
   C=`cat /sys/kernel/sound_control_3/gpl_headphone_pa_gain | awk '{print $1}'`
-  RF=/data/.emotionkernel/gpl_headphone_gain
-  R=`cat /data/.emotionkernel/gpl_headphone_gain`
-  OF=/data/.emotionkernel/check
-  O=`cat /data/.emotionkernel/check`
+  RF=/data/.simplicitykernel/gpl_headphone_gain
+  R=`cat /data/.simplicitykernel/gpl_headphone_gain`
+  OF=/data/.simplicitykernel/check
+  O=`cat /data/.simplicitykernel/check`
   if [ ! -z $2 ]
     then
       val=$2
