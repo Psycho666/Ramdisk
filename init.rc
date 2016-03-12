@@ -1758,8 +1758,8 @@ on property:service.vpnclientd.enable=1
 on property:service.vpnclientd.enable=0
     stop vpnclientd
 
-# init Simplicity Kernel
-service emotioninit /sbin/simpl.sh
+# init simplicity Kernel
+service simplinit /sbin/simpl.sh
     class main
     user root
     oneshot
