@@ -66,6 +66,14 @@ $BB chmod -R 755 /res/synapse
 $BB chmod -R 755 /res/synapse/files/*
 /sbin/uci
 
+# Synapse
+mount -t rootfs -o remount,rw rootfs
+ln -fs /res/synapse/uci /sbin/uci
+/sbin/uci
+mount -t rootfs -o remount,ro rootfs
+
+sync
+
 # kernel custom test
 if [ -e /data/simpltest.log ]; then
 	rm /data/simpltest.log
