@@ -1,7 +1,7 @@
 
 case $1 in
 usb_mode)
-  P=/data/.emotionkernel/mass_storage
+  P=/data/.simplicitykernel/mass_storage
   if [ ! -z $2 ]; then
   if [ $2 == DEFAULT ]; then
     echo 0 > $P
